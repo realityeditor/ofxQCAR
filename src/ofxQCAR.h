@@ -116,6 +116,7 @@ public:
     
     virtual void setup();
     virtual void update();
+    virtual void cheapUpdate();
     virtual void exit();
     
     virtual void pause();
@@ -175,7 +176,8 @@ public:
     
     void startExtendedTracking();
     void stopExtendedTracking();
-    void addExtraTarget(string targetName);
+    QCAR::DataSet * addExtraTarget(string targetName);
+     bool removeExtraTarget(QCAR::DataSet * targetName);
     
 private:
     
